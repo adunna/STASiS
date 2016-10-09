@@ -1,5 +1,7 @@
 # STASiS
 
+![STASiS design example](https://i.imgur.com/vxhF7ob.jpg)
+
 ## Inspiration
 Noticing dangerous situations and reacting to them can often lead to a difference between life and death. Often times, noticing these critical situations is hard for people since it might require looking at lots tiny details and putting them together. Our solution to this: computers!
 
@@ -12,7 +14,7 @@ We started building around the Clarifai API and playing with it. Another teammat
 
 ## Technical details
 #### Front-end
-With our front, we trying to achieve one simple goal: Make the UI as clean as possible while still displaying all the information to the user. Materialize (by Google) seemed to be a natural fit for this. We use a grid layout that is responsive to the device's screen size. We get all the data from the server asynchronously. This means that the user does not experience a slow browser experience.
+With our front, we trying to achieve one simple goal: Make the UI as clean as possible while still displaying all the information to the user. Materialize, which implements Material Design by Google, seemed to be a natural fit for this. We use a grid layout that is responsive to the device's screen size, and we get all the data from the server asynchronously. This means that the user does not experience a slow browsing experience, but still has all the necessary information plus nice visualizations.
 
 
 ## Running the server
