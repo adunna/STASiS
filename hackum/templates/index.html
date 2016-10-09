@@ -18,16 +18,17 @@
 
 
 <nav class="light-blue lighten-1" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo center"><i class="large material-icons">assessment</i>STASiS</a><a class="modal-trigger brand-logo" href="#aboutmodal"><i class="material-icons">help</i></a>
-    <ul class="right hide-on-med-and-down">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo center hide-on-med-and-down"><i class="large material-icons">assessment</i>STASiS</a><a class="modal-trigger brand-logo" href="#aboutmodal"><i class="material-icons">help</i></a>
+    <ul class="right">
       <a class="btn waves-effect waves-light green" id="picButton" onclick="togglePicTake()"><b>Start</b></a>
     </ul>
     <ul id="nav-mobile" class="side-nav">
-      <li><a href="#">Video</a></li>
-      <li><a href="#">Graph</a></li>
-      <li><a href="#">Word Plot</a></li>
-      <li><a href="#">Situations</a></li>
-      <li><a href="#">Results</a></li>
+      <li>Click to Toggle</li>
+      <li><a onclick="toggleShow('vidcol')">Video</a></li>
+      <li><a onclick="toggleShow('chartcol')">Graph</a></li>
+      <li><a onclick="toggleShow('wordCloudContainer')">Word Plot</a></li>
+      <li><a onclick="toggleShow('sitcol')">Situations</a></li>
+      <li><a onclick="toggleShow('resultcol')">Results</a></li>
     </ul>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
@@ -49,7 +50,7 @@
     <div class="row">
 
       <!-- BEGIN "G" -->
-      <div class="col s12 m12 l3">
+      <div id="sitcol" class="col s12 m12 l3">
         <div class="card verticaldata center-align">
           <div class="card-title" style="font-size:16px; font-weight:bold;">
             <div class="col s12">
@@ -103,7 +104,7 @@
       </div>
       <!-- END "G" -->
 
-      <div class="col s12 m12 l6">
+      <div id="vidcol" class="col s12 m12 l6">
         <div class="card verticaldata center-align">
           <div class="card-content">
             <video id="videl" muted="" style="width:100%; height:45vh;"></video>
@@ -111,7 +112,7 @@
         </div>
       </div>
 
-      <div class="col s12 m12 l3">
+      <div id="resultcol" class="col s12 m12 l3">
         <div class="card verticaldata center-align">
           <span class="card-title">Results</span>
           <div class="card-content left-align">
@@ -133,7 +134,7 @@
         </div>
       </div>
 
-      <div class="col s12 m12 l6">
+      <div id="chartcol" class="col s12 m12 l6">
         <div class="card blockdata center-align" style="min-height: 33vh; margin-top: -2vh;">
           <div class="card-content">
             <div id="chartContainer" style="width:100%; height:28vh;"></div>
@@ -198,6 +199,10 @@
       doubleMap.push([""+situationMap[1][i]+"","Positive"])
     }
     return doubleMap;
+  }
+
+  function toggleShow(eid) {
+    $("#"+eid).toggle();
   }
 
   function convertToDoubles(sitMap) {
