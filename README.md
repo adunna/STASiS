@@ -1,4 +1,17 @@
-# hackumass16
+# STASiS
+
+## Inspiration
+Noticing dangerous situations and reacting to them can often lead to a difference between life and death. Often times, noticing these critical situations is hard for people since it might require looking at lots tiny details and putting them together. Our solution to this: computers!
+
+With the increase in computational power in the last 5 years, computers have gotten exponentially faster, analyzing and moving heaps of data. With tools like Clarifai, TensorFlow and Caffe now open to the masses, it has become easier to combine these systems to build tools that are capable of collecting large amounts of data and processing them into usable data.
+
+Our inspiration for this situational analysis system came from real-life projects such as DeepMind, as well as fictional icons such as Person of Interest. While in some fictitious shows the system is used as a tool for monitoring people, we want our tool to be used for potentially dangerous situations which could save lives without being intrusive and respecting privacy.
+
+## How We Built It
+We started building around the Clarifai API and playing with it. Another teammate developed a simple back-end web server capable of taking input from the webcam. We then linked these two up so that we could send pictures to the server and get back tags from Clarifai's API. We then built a statistical analysis tool for the data in a way that the more recent frames are given higher weightage when the system is trying to calculate the probability of a specific situation. We then brought it all together in a front-end that was written in Materialize. 
+
+## Running the server
+To build the required back-end, use the following commands:
 ```
 mkvirtualenv --python=$(which python3) hackum
 pip install -r requirements.txt
