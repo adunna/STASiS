@@ -1,0 +1,23 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.verticaldata {
+  height: 51.7vh;
+}
+.blockdata {
+  height:25vh;
+}
+.card {
+  padding-top:1em;
+}
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+}

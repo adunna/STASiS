@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}STASiS{% endblock %}</title>
+    {% block meta %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    {% endblock %}
+
+    {% block css %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'jqcloud.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" /> 
+    {% endblock %}
+
+    {% block js %}
+    <script type="text/javascript">window.csrfToken = "{{ csrf_token }}";</script>
+    <script type="text/javascript" src="{% static 'core.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'materialize.min.js' %}"></script>
+    <script src="{% static 'jqcloud.min.js' %}"></script>
+    <script src="{% static 'init.js' %}"></script>
+    <script src="{% static 'canvasjs.min.js' %}"></script>
+    {% endblock %}
+</head>
+
+<body{% block bodytag %}{% endblock %}>
+{% block body %}
+    <header>
+    {% block header %}
+    {% endblock %}
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+    {% block footer %}
+    {% endblock %}
+    </footer>
+
+{% endblock %}
+</body>
+</html>

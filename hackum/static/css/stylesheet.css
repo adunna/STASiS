@@ -1,0 +1,7 @@
+.box {padding-bottom: 6px; width: 100%; height: 60px; margin-left: 0%; margin-top: 0%; background-color: #696969; display: inline-block; border-radius: 55px;}
+    
+    .background {width: 1024px; height: 720px; overflow: hidden;}
+    .video {text-align: center; margin-left: 20%; width: 60%; height: 600px; margin-top: 2%; border: 1px black; border-style: solid; display: inline-block; overflow: hidden;}
+    h1{font-family: Helvetica; text-align: center;}
+    p {text-align: center; font-size: 14pt; font-family: Helvetica;}
+    body {background-color: #DCDCDC;}

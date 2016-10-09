@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Home - {{ block.super }}{% endblock %}
+
+{% block css %}
+{{ block.super }}
+<style type="text/css">
+#wordcanvas {
+    width: 100%;
+    height: 300px;
+}
+</style>
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+    <script src="https://timdream.org/wordcloud2.js/src/wordcloud2.js"></script>
+    <script type="text/javascript">
+    list = [["indoors",0.9694646596908569],["man",0.9642453193664551],["adult",0.9589995741844177],["people",0.9582227468490601],["industry",0.9461209774017334],["medicine",0.9382030963897705],["portrait",0.9364431500434875],["technology",0.9309625625610352],["competition",0.9270044565200806],["education",0.9228575229644775],["healthcare",0.9228561520576477],["room",0.9062877893447876],["science",0.9012347459793091],["business",0.882731020450592],["eyeglasses",0.880050539970398],["one",0.8515027165412903],["auto racing",0.8486735820770264],["music",0.840874433517456],["offense",0.8363394737243652],["wear",0.8292590379714966]];
+    loadWc = function(list) {
+        var canv = document.querySelector("#wordcanvas");
+        var div = document.querySelector("#wordouter");
+        canv.height = div.offsetHeight;
+        canv.width  = div.offsetWidth;
+        var wc = WordCloud(canv, {
+            'list': list
+        });
+    }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+<div id="wordouter" style="width:100%;height:500px">
+    <canvas id="wordcanvas" width=1024 height=300></canvas>
+</div>
+<div id="wordhtmlcanvas"></div>
+<script>loadWc(list)</script>
+
+{% endblock %}

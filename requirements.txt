@@ -1,0 +1,5 @@
+Django==1.10.2
+channels==0.17.2
+git+git://github.com/Clarifai/clarifai-python.git
+asgi_redis
+numpy
