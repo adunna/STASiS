@@ -70,6 +70,10 @@
                     <label for="none">None</label>
                   </p>
                   <p>
+                    <input class="with-gap" name="group1" type="radio" id="happy"/>
+                    <label for="happy">Happy</label>
+                  </p>
+                  <p>
                     <input class="with-gap" name="group1" type="radio" id="danger_driving"/>
                     <label for="danger_driving">Danger: Driving</label>
                   </p>
@@ -104,7 +108,7 @@
       </div>
       <!-- END "G" -->
 
-      <div id="vidcol" class="col s12 m12 l6">
+      <div id="vidcol" class="col s12 m12 l6 fliph">
         <div class="card verticaldata center-align">
           <div class="card-content">
             <video id="videl" muted="" style="width:100%; height:45vh;"></video>
@@ -161,7 +165,8 @@
     "danger_fighting": [["battle","weapon","war"], ["adult","police"]],
     "danger_smoking": [["smoke","smoker","tobacco","nicotine","toxic","drug"], ["man","adult","child","people","cigar"]],
     "danger_animal": [["wild","animal","meat","offense","teeth","mouth","roar","danger","blood"], ["child","man","person","group","adult","outdoors"]],
-    "danger_fire": [["flame","smoke","weapon","burn"], ["house", "man", "woman", "child", "person"]]
+    "danger_fire": [["flame","smoke","weapon","burn"], ["house", "man", "woman", "child", "person"]],
+    "happy": [["joy","smile","happy"],["person","boy","girl","man","woman"]]
   };
 
   var currentSituation = "";
