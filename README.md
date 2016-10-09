@@ -16,6 +16,9 @@ We started building around the Clarifai API and playing with it. Another teammat
 #### Front-end
 With our front, we trying to achieve one simple goal: Make the UI as clean as possible while still displaying all the information to the user. Materialize, which implements Material Design by Google, seemed to be a natural fit for this. We use a grid layout that is responsive to the device's screen size, and we get all the data from the server asynchronously. This means that the user does not experience a slow browsing experience, but still has all the necessary information plus nice visualizations.
 
+#### Statistical Analysis
+The statistical analysis that we use is one of the core algorithms for the project. The idea behind it is fairly simple: If two frames are close together (i.e. the timestamps have some range), the tool should weigh in analysis tags from the old frames when getting the probablilities for the new frames. This is done to normalize outlying probablilty for tags, which means that if the API get a tag wrong in a single frame, it is unlikely to affect the entire probability outcome.
+
 
 ## Running the server
 To build the required back-end, use the following commands:
