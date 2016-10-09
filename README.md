@@ -10,6 +10,11 @@ Our inspiration for this situational analysis system came from real-life project
 ## How We Built It
 We started building around the Clarifai API and playing with it. Another teammate developed a simple back-end web server capable of taking input from the webcam. We then linked these two up so that we could send pictures to the server and get back tags from Clarifai's API. We then built a statistical analysis tool for the data in a way that the more recent frames are given higher weightage when the system is trying to calculate the probability of a specific situation. We then brought it all together in a front-end that was written in Materialize. 
 
+## Technical details
+#### Front-end
+With our front, we trying to achieve one simple goal: Make the UI as clean as possible while still displaying all the information to the user. Materialize (by Google) seemed to be a natural fit for this. We use a grid layout that is responsive to the device's screen size. We get all the data from the server asynchronously. This means that the user does not experience a slow browser experience.
+
+
 ## Running the server
 To build the required back-end, use the following commands:
 ```
