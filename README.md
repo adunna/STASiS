@@ -2,6 +2,9 @@
 
 ![STASiS design example](https://i.imgur.com/vxhF7ob.jpg)
 
+## Use It Live
+https://stasis-project.org
+
 ## Inspiration
 Noticing dangerous situations and reacting to them can often lead to a difference between life and death. Often times, noticing these critical situations is hard for people since it might require looking at lots tiny details and putting them together. Our solution to this: computers!
 
